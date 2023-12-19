@@ -523,3 +523,13 @@ footer{
 .section .card {
   font-size: 14px;
 }
+.btn-close{
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  padding: 6px;
+  font-size: 16px;
+  border: 1px solid #222;
+  border-radius: 6px;
+  z-index: 999;
+}

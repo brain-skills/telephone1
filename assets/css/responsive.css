@@ -93,8 +93,8 @@
         padding-left: calc(var(--bs-gutter-x) * 1.0);
     }
     .pp-section {
-        padding-left: calc(var(--bs-gutter-x) * 1.2);
-        padding-right: calc(var(--bs-gutter-x) * 1.2);
+        padding-left: calc(var(--bs-gutter-x) * 1.0);
+        padding-right: calc(var(--bs-gutter-x) * 1.0);
     }
     .header-menu {left: calc(var(--bs-gutter-x) * 2.0);}
     #orderButton {
@@ -105,8 +105,8 @@
     footer {
         left: calc(var(--bs-gutter-x) * 2.0);
     }
-    #faqBlock a {
-        font-size: 1.0em;
+    .phoneNumb{
+        display: none;
     }
 }
 @media (max-width: 950px) {}
@@ -121,14 +121,64 @@
     #moblTable{
         display: block;
     }
-    .badge-border {
-        display: block;
+    .badge {
+        white-space: normal;
+        line-height: 1.4;
+        padding: 6px 10px;
     }
-    .mh2{
+    .section h1{
         font-size: calc(1.2rem) !important;
     }
+    .section p{
+        font-size: calc(0.75rem) !important;
+    }
+    .mh2{
+        font-size: calc(0.8rem) !important;
+    }
+    .mh3{
+        font-size: calc(0.9rem) !important;
+    }
     .mh5{
-        font-size: 1.0rem !important;
+        font-size: 0.8rem !important;
+    }
+    .accordion-body{
+        padding: 5px 10px;
+        height: 98px;
+        overflow-y: scroll;
+    }
+    .accordion-button{
+        background-color: rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        padding: 5px 10px;
+    }
+    .accordion-item .accordion-button, .accordion-item .accordion-button{
+        font-size: calc(0.9rem) !important;
+    }
+    .swiper-pagination{
+        margin-top: 0px;
+    }
+    .swiper-slide table span{
+        margin-left: 10px;
+    }
+    .section .autor-img{
+        margin: 30px 0 10px 0;
+    }
+    .about-desc h3{
+        font-size: calc(1.2rem) !important;
+    }
+    .about-desc p{
+        font-size: calc(0.75rem) !important;
+    }
+    #faqBlock {
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+    #faqBlock a {
+        font-size: 1.0em;
+        position: relative;
+        width: 100%;
+        display: block;
     }
 }
 @media (max-width: 650px) {}

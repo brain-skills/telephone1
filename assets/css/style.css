@@ -17,16 +17,18 @@ body {
   inset: 15px;
   z-index: 0 !important;
 }
-
+a {
+  text-decoration: none;
+}
 hr {
   margin: 0.5rem 0;
 }
-#faqBlock a {
+.faqblock a {
   margin: 0 0.1em 0.6em 0.1em !important;
   text-decoration: none;
   font-size: 1.2em;
 }
-#faqBlock a i {
+.faqblock a i {
   padding-left: 5px;
 }
 footer p{
@@ -37,7 +39,7 @@ footer hr{
   height: 2px;
   border: none;
   margin-top: 0 !important;
-  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7483368347338936) 25%, rgba(0,0,0,1) 50%, rgba(0,0,0,0.7511379551820728) 75%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,0.5) 25%, rgba(255,255,255,1) 50%, rgba(255,255,255,0.5) 75%, rgba(0,0,0,0) 100%);
 }
 #phoneNumb{
   text-decoration: none;
@@ -47,24 +49,48 @@ footer hr{
   --bs-badge-padding-x: 1em;
   --bs-badge-padding-y: 0.8em;
 }
+.finger-right.active{
+  animation-name: example;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  position: relative;
+  margin-right: -10px;
+}
+.finger-right:not(.active){
+  display: none;
+}
+@keyframes example {
+  0%   {right: 5px;}
+  10%  {right: 10px;}
+  20%  {right: 15px;}
+  30%  {right: 20px;}
+  40%  {right: 25px;}
+  50%  {right: 30px;}
+  60%  {right: 25px;}
+  70%  {right: 20px;}
+  80%  {right: 15px;}
+  90%  {right: 10px;}
+  100% {right: 5px;}
+}
 
 body.light-theme{background: #222; color: #222;}
 .light-theme h1, .light-theme h2, .light-theme h3, .light-theme h4, .light-theme h5, .light-theme h6, .light-theme p, .light-theme label, .light-theme .list-group-item  {
-  color: #222;
+  color: #fff;
 }
-.light-theme #navbarMenu li a{color: #222;}
+.modal-body h4{color: #222;}
+.light-theme #navbarMenu li a{color: #fff;}
 .light-theme #navbarMenu li a.active {color: #fff;border-bottom: 2px solid #fff;}
-.light-theme #navbarMenu li.active {color: #222 ;border-bottom: 2px solid #222;}
-.light-theme #navbarMenu li a.active {color: #222 ;border-bottom: 2px solid #222;}
-.light-theme #navbarMenu li.active:hover{border-bottom: 2px solid #222;}
+.light-theme #navbarMenu li.active {color: #222 ;border-bottom: 2px solid #fff;}
+.light-theme #navbarMenu li a.active {color: #222 ;border-bottom: 2px solid #fff;}
+.light-theme #navbarMenu li.active:hover{border-bottom: 2px solid #fff;}
 .light-theme #navbarMenu li:hover{border-bottom: 1px solid rgba(0, 0, 0, 0.6);}
 .light-theme .btn-outline-light{color: #222;border-color: #222;}
 .light-theme #toggleSwitcher{background: #fff;}
 .light-theme #pp-nav li .active span, .pp-slidesNav .active span {background: rgba(0, 0, 0, 0.8);}
 .light-theme #pp-nav li span, .pp-slidesNav span {background: rgba(0, 0, 0, 0.20);}
 .light-theme .modal-content h1, .light-theme .modal-content p {color: #222 !important;}
-.light-theme .navbar-toggler-icon {background-image: url(../images/svg/d-list.svg);}
-.light-theme .navbar-toggler{border-color: #222;}
+.light-theme .navbar-toggler-icon {background-image: url(../images/svg/list.svg);}
+.light-theme .navbar-toggler{border-color: #fff;}
 @media (max-width: 991px) {
   .light-theme .navbar-collapse {
     background: #fff;
@@ -78,13 +104,17 @@ body.light-theme{background: #222; color: #222;}
   }
 }
 
-.light-theme .tp-hero-social a {border: 1px solid rgba(0, 0, 0, 0.6); color: #222;}
+.light-theme .tp-hero-social a {border: 1px solid rgba(255, 255, 255, 0.6); color: #fff;}
 
-.light-theme .tp-hero-social-bar{background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.6) 100%);}
-.light-theme .tp-hero-social-bar.tp-hero-social-bar-2 {background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);}
+.light-theme .tp-hero-social-bar{background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);}
+.light-theme .tp-hero-social-bar.tp-hero-social-bar-2 {background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);}
 
 .section {
-  background: #fff; color: #222 !important;
+  /* background: radial-gradient(circle, rgba(35,97,39,1) 0%, rgba(6,46,97,1) 100%); */
+  background-image: url(../images/bg/1.png);
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff !important;
 }
 
 .modal{color: #222;}
@@ -382,7 +412,7 @@ footer{
 .tp-hero-social a {
   display: inline-block;
   font-size: 18px;
-  background: #1D2B16;
+  background: #fff;
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 40px;
   height: 40px;
@@ -403,8 +433,15 @@ footer{
   font-size: 14px;
 }
 
+.pricetable th{
+  background: none;
+  color: #fff;
+}
 .pricetable td{
+  background: none;
+  color: #fff;
   padding: 0.15rem 0;
+  border-color: rgb(255, 255, 255, 0.3);
 }
 
 .vertical-table-text{

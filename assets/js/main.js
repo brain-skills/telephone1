@@ -37,3 +37,27 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: '.swiper-button-prev'
   }
 });
+
+// Получаем элементы 
+const currentPage = document.getElementById("section6");
+let fingerRight = document.querySelector(".finger-right");
+
+// Создаем наблюдателя
+const observer = new MutationObserver(function() {
+  if(currentPage.classList.contains("active")){
+    console.log("TRUE");
+    fingerRight.classList.add("active"); 
+  } else {
+    console.log("FALSE");
+    fingerRight.classList.remove("active"); 
+  }
+});
+
+// Настраиваем наблюдение за атрибутом class
+const config = {
+  attributes: true,
+  attributeFilter : ["class"]
+};
+
+// Подписываемся на события элемента 
+observer.observe(currentPage, config);

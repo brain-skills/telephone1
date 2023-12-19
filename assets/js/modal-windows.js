@@ -31,6 +31,22 @@ let answer6 = `
 <h4>Можно ли совместить работу и обучение?</h4>
 <p class="mb-0">Да, курс рассчитан на обучение в свободное время.</p>
 `;
+let answer7 = `
+<h4>Обрести репутацию мастера-профессионала</h4>
+<p class="mb-0">Имея навыки из этой обучающей программы, можно постепенно стать мастером, к которому будут стекаться интересные заказы.</p>
+`;
+let answer8 = `
+<h4>Получить возможность работать мастером за границей</h4>
+<p class="mb-0">Приятный плюс, что навыки ремонта телефонов универсальны и могут дать заработок в другой стране.</p>
+<p class="mb-0">Везде телефоны в основном одинаковые. Тоже ломаются, требуют ровных рук и мозгов для обслуживания.</p>
+<p class="mb-0">Поэтому в другой стране навыки ремонта электроники тоже достойно оплачиваются.</p>
+`;
+let answer9 = `
+<h4>Расширить спектр своих услуг или сменить специализацию</h4>
+<p class="mb-0">Телефон — это воплощение самых передовых инженерных решений в электронике.</p>
+<p class="mb-0">Представьте, что вы разбираетесь, как устроен современный телефон, какие типичные неисправности в нем встречаются, как безопасно их искать и устранять.</p>
+<p class="mb-0">С такими навыками вы сможете разобраться с ремонтом другой электроники. </p>
+`;
 
 let question1 = document.querySelector('#question1');
 let question2 = document.querySelector('#question2');
@@ -38,6 +54,9 @@ let question3 = document.querySelector('#question3');
 let question4 = document.querySelector('#question4');
 let question5 = document.querySelector('#question5');
 let question6 = document.querySelector('#question6');
+let question7 = document.querySelector('#question7');
+let question8 = document.querySelector('#question8');
+let question9 = document.querySelector('#question9');
 
 question1.onclick = function(){modalWindow.innerHTML = answer1};
 question2.onclick = function(){modalWindow.innerHTML = answer2};
@@ -45,3 +64,6 @@ question3.onclick = function(){modalWindow.innerHTML = answer3};
 question4.onclick = function(){modalWindow.innerHTML = answer4};
 question5.onclick = function(){modalWindow.innerHTML = answer5};
 question6.onclick = function(){modalWindow.innerHTML = answer6};
+question7.onclick = function(){modalWindow.innerHTML = answer7};
+question8.onclick = function(){modalWindow.innerHTML = answer8};
+question9.onclick = function(){modalWindow.innerHTML = answer9};

@@ -180,6 +180,8 @@
         width: 100%;
         display: block;
     }
+    .m-center{text-align: center;}
+    .light-theme #navbarMenu li a{color: #222;}
 }
 @media (max-width: 650px) {}
 @media (max-width: 600px) {}

@@ -136,10 +136,10 @@
         font-size: calc(0.8rem) !important;
     }
     .mh3{
-        font-size: calc(0.9rem) !important;
+        font-size: calc(1.0rem) !important;
     }
     .mh5{
-        font-size: 0.8rem !important;
+        font-size: 0.9rem !important;
     }
     .accordion-body{
         padding: 5px 10px;
@@ -177,7 +177,7 @@
     #faqBlock a {
         font-size: 1.0em;
         position: relative;
-        width: 100%;
+        width: 97%;
         display: block;
     }
     .m-center{text-align: center;}
